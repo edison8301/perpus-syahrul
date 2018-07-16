@@ -1,0 +1,19 @@
+- clone
+git init
+git clone link
+
+- push
+git config --global user.email "email@g"
+git config --global user.name "nama"
+
+git status
+git add --all
+
+git status => ijo
+
+git commit -m "sisi dekripsi"
+
+git push origin master
+
+- pull
+git pull origin master
