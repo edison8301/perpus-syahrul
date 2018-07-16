@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2018 at 06:30 PM
+-- Generation Time: Jul 13, 2018 at 11:54 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -37,6 +37,13 @@ CREATE TABLE `anggota` (
   `status_aktif` int(11) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `anggota`
+--
+
+INSERT INTO `anggota` (`id`, `nama`, `alamat`, `telepon`, `email`, `status_aktif`) VALUES
+(6, 'Syahrul', 'jl raya mulya asri', '09487383198', 'syahrul@gmail.com', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -60,8 +67,9 @@ CREATE TABLE `buku` (
 --
 
 INSERT INTO `buku` (`id`, `nama`, `tahun_terbit`, `id_penulis`, `id_penerbit`, `id_kategori`, `sinopsis`, `sampul`, `berkas`) VALUES
-(1, 'cintah', 2018, 1, 1, 1, 'asda asdas dsadasd asdsa das dsadsa dasda sdsad sadas das asdsad sadsad asd sad sadsa dsa dsadsad sads adsad sa dasd sad sad sad sadsad sadsad sad sad sadsad sadsadsadsa dsadsad sad sadsa dsad sadsad sadsad sadasd asdsad asd', 'cintah_Koala.jpg', 'cintah_aasr.docx'),
-(5, 'saya', 2019, 2, 2, 3, 'sad asd sadas dasd asdsa dasd asdasdsa das asda dasdas dsad sad sad sa sad sadasd adsadsad sadsad sad sad sad asdsadsad wqd fawdwadwad wdwa dwad wad awdwa dwad awdwadawd wadwadwadawd q', 'saya_Penguins.jpg', 'saya_sraa.docx');
+(1, 'cintah', 2018, 1, 1, 1, 'asda asdas dsadasd asadsad sadsad sad sad sadsad sadsadsadsa dsadsad sad sadsa dsad sadsad sadsad sadasd asdsad asd', 'cintah_Koala.jpg', 'cintah_aasr.docx'),
+(5, 'saya', 2019, 2, 2, 3, 'sad asd sadas dasd asdsa dasd asdasdsa das asda dasdas dsad sad sad sa sad sadasd adsadsad sadsad sad sad sad asdsadsad wqd fawdwadwad wdwa dwad wad awdwa dwad awdwadawd wadwadwadawd q', 'saya_Penguins.jpg', 'saya_sraa.docx'),
+(7, 'kamu', 2018, 1, 1, 1, 'asdadasdasdas a dasd asd asda asdasd asd asd adasd asd asda sdasdasd asd asd asd asd asd as das dasd asd asdsad', 'kamu_Chrysanthemum.jpg', 'kamu_sraa.docx');
 
 -- --------------------------------------------------------
 
@@ -120,8 +128,7 @@ CREATE TABLE `penerbit` (
 
 INSERT INTO `penerbit` (`id`, `nama`, `alamat`, `telepon`, `email`) VALUES
 (1, 'Pt. Permana Putra', 'Jl. burung Geraja no 12', '087733123124', 'ptpermanapurtra@gmail.com'),
-(2, 'Pt. Purmana Putra', 'Jl. Burung Gereja no 11', '0987647635213', 'ptpurmanaputra@gmail.com'),
-(3, 'Pt. Syahrul', NULL, NULL, NULL);
+(2, 'Pt. Purmana Putra', 'Jl. Burung Gereja no 11', '0987647635213', 'ptpurmanaputra@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -175,6 +182,14 @@ CREATE TABLE `user` (
   `id_user_role` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`, `id_anggota`, `id_petugas`, `id_user_role`, `status`) VALUES
+(1, 'Admin', 'Admin', NULL, NULL, NULL, 1),
+(7, 'syahrul', 'syahrul', 6, 0, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -262,19 +277,19 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `anggota`
 --
 ALTER TABLE `anggota`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `buku`
 --
 ALTER TABLE `buku`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `peminjaman`
@@ -286,13 +301,13 @@ ALTER TABLE `peminjaman`
 -- AUTO_INCREMENT for table `penerbit`
 --
 ALTER TABLE `penerbit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `penulis`
 --
 ALTER TABLE `penulis`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `petugas`
@@ -304,7 +319,7 @@ ALTER TABLE `petugas`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user_role`

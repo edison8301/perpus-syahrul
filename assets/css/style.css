@@ -531,7 +531,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
 }
 .top-nav .icon-user .username {
     color: #555555;
-    font-size: 13px;
+    font-size: 20px;
     position: relative;
     top: -5px;
 }
@@ -2379,7 +2379,7 @@ ul.inbox-pagination li {
 }
 .agile-info {
    padding:9em 2em 16.6em;
-    background: rgba(52, 152, 219, 0.42);
+    background: rgba(117, 230, 232, 0.42);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     text-align: center;
 }
@@ -2399,7 +2399,7 @@ ul.inbox-pagination li {
     padding: 12px 0px;
     letter-spacing: 2px;
     display: inline-block;
-    background: #3498db;
+    background: #44c9cb;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -o-transition: 0.5s all;
@@ -2407,7 +2407,7 @@ ul.inbox-pagination li {
     -ms-transition: 0.5s all;
 }
 .agile-info a:hover {
-    background: #2980b9;
+    background: #75e6e8;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -o-transition: 0.5s all;
@@ -2481,7 +2481,7 @@ ul.inbox-pagination li {
 .w3layouts-main {
     width: 30%;
     margin:5em auto;
-    background:rgba(52, 152, 219, 0.75);
+    background:rgba(68, 201, 203, 0.75);
     padding: 42px 35px;
 }
 /*--//header--*/
@@ -2549,7 +2549,7 @@ input.ggg{
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background: #2980b9;
+    background: #75e6e8;
     color: white;
     border: none;
     outline: none;
@@ -2563,7 +2563,7 @@ input.ggg{
     -ms-transition: 0.5s all;
 }
 .w3layouts-main input[type="submit"]:hover {
-	background:#7f8c8d;
+	background:#44c9cb;
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-o-transition:0.5s all;

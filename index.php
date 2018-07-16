@@ -39,20 +39,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 
 
-<!-- |=====================================================| -->
-<!-- |====================| 404 start |====================| -->
-<!-- |=====================================================| -->
-<div class="eror-w3">
-	<div class="agile-info">
-		<h3>SORRY</h3>
-		<h2>404</h2>
-		<p>Maaf ada sesuatu yang ERROR</p>
-		<a onclick="history.back()">KEMBALI</a>
+<!-- |=======================================================| -->
+<!-- |====================| login start |====================| -->
+<!-- |=======================================================| -->
+<div class="log-w3">
+	<div class="w3layouts-main">
+		<div align="center">
+			<!-- <img class="img00" src="assets/images/iconlogo.png"> -->
+		</div>
+		<h2>Sign In</h2>
+			<form action="aksi_login.php" method="POST">
+				<input type="text" class="ggg" name="username" placeholder="USERNAME :" required="">
+				<input type="password" class="ggg" name="password" placeholder="PASSWORD :" required="">
+				<?php //<h6><a href="forgot.php">Forgot Password?</a></h6> ?>
+				<div class="clearfix"></div>
+				<input type="submit" value="Sign In" name="login">
+			</form>
+			<?php //<p>Don't Have an Account ?<a href="register.php">Create an account</a></p> ?>
 	</div>
 </div>
-<!-- |===================================================| -->
-<!-- |====================| 404 end |====================| -->
-<!-- |===================================================| -->
+<!-- |=====================================================| -->
+<!-- |====================| login end |====================| -->
+<!-- |=====================================================| -->
 
 
 
