@@ -4,7 +4,7 @@ include "../config/koneksi.php";
 
 $id=$_GET['id'];
 
-$query = "SELECT * FROM anggota WHERE id='$id'";
+$query = "SELECT anggota.*, user.*FROM anggota, user WHERE anggota.id=user.id_anggota";
 $hasil = mysqli_query($conn, $query);
 $tampil = mysqli_num_rows($hasil);
 
