@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2018 at 11:54 AM
+-- Generation Time: Jul 16, 2018 at 12:23 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -42,7 +42,8 @@ CREATE TABLE `anggota` (
 --
 
 INSERT INTO `anggota` (`id`, `nama`, `alamat`, `telepon`, `email`, `status_aktif`) VALUES
-(6, 'Syahrul', 'jl raya mulya asri', '09487383198', 'syahrul@gmail.com', 1);
+(1, 'Anggota', 'Jl. Kebenaran Anggota', '087733195024', 'Anggota@gmail.com', 1),
+(2, 'Anggota00', 'Jl. Kebenaran 304', '087733195023', 'Anggota00@gmail.com', 1);
 
 -- --------------------------------------------------------
 
@@ -67,9 +68,9 @@ CREATE TABLE `buku` (
 --
 
 INSERT INTO `buku` (`id`, `nama`, `tahun_terbit`, `id_penulis`, `id_penerbit`, `id_kategori`, `sinopsis`, `sampul`, `berkas`) VALUES
-(1, 'cintah', 2018, 1, 1, 1, 'asda asdas dsadasd asadsad sadsad sad sad sadsad sadsadsadsa dsadsad sad sadsa dsad sadsad sadsad sadasd asdsad asd', 'cintah_Koala.jpg', 'cintah_aasr.docx'),
-(5, 'saya', 2019, 2, 2, 3, 'sad asd sadas dasd asdsa dasd asdasdsa das asda dasdas dsad sad sad sa sad sadasd adsadsad sadsad sad sad sad asdsadsad wqd fawdwadwad wdwa dwad wad awdwa dwad awdwadawd wadwadwadawd q', 'saya_Penguins.jpg', 'saya_sraa.docx'),
-(7, 'kamu', 2018, 1, 1, 1, 'asdadasdasdas a dasd asd asda asdasd asd asd adasd asd asda sdasdasd asd asd asd asd asd as das dasd asd asdsad', 'kamu_Chrysanthemum.jpg', 'kamu_sraa.docx');
+(1, 'Cintah Tak Kembali', 2013, 1, 2, 5, 'asd asdas dasdas dasd asdasd asdasdas dasd asdas dasdasdsada dasd sadas dsad sadas dsa dsad sad asd asd asdas dasd asdsad asdasd asd asda sdasda sdsadasdas', 'Cintah Tak Kembali_Koala.jpg', 'Cintah Tak Kembali_aasr.docx'),
+(2, 'Suamiku Jarang Pulang', 2015, 2, 1, 5, 'adasdas asdasa d asdas dasdas dsad asdadasdasdas dsad asdas dsad sadasd asdasd asd asdas dasdasddwdadaw assad sad sad asd sad asdas d asdsa dasdas', 'Suamiku Jarang Pulang_Penguins.jpg', 'Suamiku Jarang Pulang_sraa.docx'),
+(3, 'Kamu Ko Selingkuh', 2018, 3, 2, 4, 'asdasd sadasd as dasd asdasdas as a asdsa bda das da d sad as das das d asd sadsa fas fasf asf as fdsa das dsa dsa d asd sa d asd as das da sd asd as das d as das ds das d afg ewf awf ', 'Kamu Ko Selingkuh_Lighthouse.jpg', 'Kamu Ko Selingkuh_aasr.docx');
 
 -- --------------------------------------------------------
 
@@ -88,11 +89,10 @@ CREATE TABLE `kategori` (
 
 INSERT INTO `kategori` (`id`, `nama`) VALUES
 (1, 'Agama'),
-(2, 'Novel'),
-(3, 'Pendidikan'),
-(4, 'Donge'),
-(5, 'Puisi'),
-(6, 'Cerpen');
+(2, 'Pendidikan'),
+(3, 'Cerpen'),
+(4, 'Puisi'),
+(5, 'Novel');
 
 -- --------------------------------------------------------
 
@@ -127,8 +127,8 @@ CREATE TABLE `penerbit` (
 --
 
 INSERT INTO `penerbit` (`id`, `nama`, `alamat`, `telepon`, `email`) VALUES
-(1, 'Pt. Permana Putra', 'Jl. burung Geraja no 12', '087733123124', 'ptpermanapurtra@gmail.com'),
-(2, 'Pt. Purmana Putra', 'Jl. Burung Gereja no 11', '0987647635213', 'ptpurmanaputra@gmail.com');
+(1, 'Polindra', 'Jl. Kebenaran 104', '087733195026', 'polindra@gmail.com'),
+(2, 'PT. Syahrul', 'Jl. Kebenaran 303', '087733195025', 'pt.syahrul@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -149,9 +149,9 @@ CREATE TABLE `penulis` (
 --
 
 INSERT INTO `penulis` (`id`, `nama`, `alamat`, `telepon`, `email`) VALUES
-(1, 'Syahrul Romadoni', 'Jl. burung gagak 5', '087733195029', 'syahrulromadoni@gmail.com'),
-(2, 'Maulana Ahmad Qusyaeri', 'Jl. burung gereja 12', '087733293092', 'maulana@gmail.com'),
-(3, 'Samsul Hadi', 'Jl. burung geraja 5', '087731234123', 'samsul@gmail.com');
+(1, 'Syahrul', 'Jl. Kebenaran 101', '087733195029', 'syahrul@gmail.com'),
+(2, 'Samsul', 'Jl. Kebenaran 102', '087733195028', 'samsul@gmail.com'),
+(3, 'Maul', 'Jl. Kebenaran 103', '087733195027', 'maul@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -188,8 +188,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `id_anggota`, `id_petugas`, `id_user_role`, `status`) VALUES
-(1, 'Admin', 'Admin', NULL, NULL, NULL, 1),
-(7, 'syahrul', 'syahrul', 6, 0, 2, 2);
+(1, 'Admin', 'Admin', 0, 0, 1, 1),
+(2, 'Anggota', 'Anggota', 1, 0, 2, 2),
+(3, 'Anggota00', 'Anggota00', 2, 0, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -277,19 +278,19 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `anggota`
 --
 ALTER TABLE `anggota`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `buku`
 --
 ALTER TABLE `buku`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `peminjaman`
@@ -319,7 +320,7 @@ ALTER TABLE `petugas`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_role`
