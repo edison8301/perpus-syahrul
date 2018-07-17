@@ -32,17 +32,6 @@ if ( $tampil> 0) {
                               </tr>
                             </thead>
                             <tbody>
-                                <?php
-
-                                    $query  = "SELECT * FROM penerbit WHERE id='$id'";
-                                    $hasil  = mysqli_query($conn, $query);
-                                    $tampil = mysqli_num_rows($hasil);
-
-                                    $i = 1;
-
-                                    if ( $tampil> 0) {
-                                        while ( $data = mysqli_fetch_assoc($hasil)) {
-                                ?>
                                 <tr>
                                     <td><?php echo $i++ ?></td>
                                     <td><?php echo $data['id']; ?></td>
@@ -52,11 +41,6 @@ if ( $tampil> 0) {
                                         <a href="halaman/mod_buku/aksi_hapus_penerbit.php?id=<?php echo $data['id'] ?>"><button class="btn btn-success" type="submit"><i class="fa fa-trash-o"></i></button></a>
                                     </td>
                               </tr>
-
-                                <?php
-                                    }
-                                }
-                                ?>
                             </tbody>
                         </table>
                     </div>
