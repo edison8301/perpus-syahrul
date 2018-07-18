@@ -8,7 +8,7 @@
                     
                     $id = ($_GET["id"]);
 
-                    $query = "SELECT * FROM anggota WHERE id='$id'";
+                    $query = "SELECT * FROM anggota INNER JOIN user ON anggota.id=user.id_anggota WHERE id_anggota='$id'";
                     $result = mysqli_query($conn, $query);
 
                     if(!$result){
@@ -36,10 +36,22 @@
                         <div class="panel-body">
                             <div class="form">
                                 <form method="POST" action="halaman/mod_buku/aksi_edit_anggota.php" class="cmxform form-horizontal" id="commentForm" novalidate="novalidate">
+                                    <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+                                    <div class="form-group">
+                                        <label for="cname" class="control-label col-lg-3">Username :</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control" id="cname" name="username" minlength="2" maxlength="45" type="text" required="" value="<?php echo $data['username']; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cname" class="control-label col-lg-3">Password :</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control" id="cname" name="password" minlength="2" maxlength="45" type="text" required="">
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <label for="cname" class="control-label col-lg-3">Nama :</label>
                                         <div class="col-lg-6">
-                                            <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
                                             <input class="form-control" id="cname" name="nama" minlength="2" maxlength="45" type="text" required="" value="<?php echo $data['nama']; ?>">
                                         </div>
                                     </div>
