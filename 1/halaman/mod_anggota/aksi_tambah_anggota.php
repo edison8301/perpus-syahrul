@@ -12,7 +12,7 @@
                                                            alamat       = '$ala',
                                                            telepon      = '$tel',
                                                            email        = '$ema',
-                                                           status_aktif = '1' ");
+                                                           status_aktif = '1'");
 
   $cari = mysqli_query($conn, "SELECT id FROM anggota WHERE email='$ema'");
   $id   = mysqli_fetch_array($cari);

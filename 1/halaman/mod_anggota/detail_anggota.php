@@ -48,8 +48,8 @@ if ( $tampil> 0) {
 									<td><?php echo $data['email']; ?></td>
 									<td><?php echo $data['status_aktif']; ?></td>
 									<td>
-	                                    <a href="media.php?page=edit_anggota&id=<?php echo $data['id'] ?>"><button class="btn btn-success" type="submit"><i class="fa fa-pencil"></i></button></a>
-	                                    <a href="halaman/mod_anggota/aksi_hapus_anggota.php?id=<?php echo $data['id'] ?>"><button class="btn btn-success" type="submit"><i class="fa fa-trash-o"></i></button></a>
+	                                    <a href="media.php?page=edit_anggota&id=<?php echo $data['id_anggota'] ?>"><button class="btn btn-success" type="submit"><i class="fa fa-pencil"></i></button></a>
+	                                    <a href="halaman/mod_anggota/aksi_hapus_anggota.php?id=<?php echo $data['id_anggota'] ?>"><button class="btn btn-success" type="submit"><i class="fa fa-trash-o"></i></button></a>
 						            </td>
 					          	</tr>
 

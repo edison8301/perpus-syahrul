@@ -35,8 +35,8 @@
                         </header>
                         <div class="panel-body">
                             <div class="form">
-                                <form method="POST" action="halaman/mod_buku/aksi_edit_anggota.php" class="cmxform form-horizontal" id="commentForm" novalidate="novalidate">
-                                    <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+                                <form method="POST" action="halaman/mod_anggota/aksi_edit_anggota.php" class="cmxform form-horizontal" id="commentForm" novalidate="novalidate">
+                                    <input type="hidden" name="id" value="<?php echo $data['id_anggota']; ?>">
                                     <div class="form-group">
                                         <label for="cname" class="control-label col-lg-3">Username :</label>
                                         <div class="col-lg-6">
@@ -46,7 +46,7 @@
                                     <div class="form-group">
                                         <label for="cname" class="control-label col-lg-3">Password :</label>
                                         <div class="col-lg-6">
-                                            <input class="form-control" id="cname" name="password" minlength="2" maxlength="45" type="text" required="">
+                                            <input class="form-control" id="cname" name="password" minlength="2" maxlength="45" type="password" required="">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -78,22 +78,16 @@
                                         <div class="col-lg-6">
                                             <select class="form-control" name="status_aktif">
                                                 <?php
-                                                $query = "SELECT * FROM anggota";
-                                                $hasil = mysqli_query($conn, $query);
+
+                                                $hasil  = mysqli_query($conn, $query);
                                                 $tampil = mysqli_num_rows($hasil);
 
                                                 if ( $tampil> 0) {
                                                     while ( $dat = mysqli_fetch_assoc($hasil)) {
-                                                        if($dat['id']==$data['status_aktif']){
-                                                            ?>
-                                                            <option value="<?php echo $dat['status_aktif']; ?>" selected="selected"><?php echo $dat['status_aktif'];?></option>
-                                                        <?php
-                                                        }else{
                                                 ?>
-                                                    <option value="1">Aktif</option>
-                                                    <option value="2">Tidak Aktif</option>
+                                                     <option value="1" <?php if($data['status_aktif']=="1"){ echo "selected='selected'";} ?>>Aktif</option>
+                                                     <option value="2" <?php if($data['status_aktif']=="2"){ echo "selected='selected'";} ?>>Tidak Aktif</option>
                                                 <?php
-                                                    }
                                                     }
                                                 }
                                                 ?>
