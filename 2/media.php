@@ -48,7 +48,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- <script src="../js/jquery-latest.js"></script> -->
 <script src="../assets/js/jquery.easyPaginate.js"></script>
 </head>
-<body onpaste="return false">
+<body>
 
 
 

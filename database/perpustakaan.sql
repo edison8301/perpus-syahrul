@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 16, 2018 at 12:23 PM
+-- Generation Time: Jul 20, 2018 at 11:51 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -42,8 +42,9 @@ CREATE TABLE `anggota` (
 --
 
 INSERT INTO `anggota` (`id`, `nama`, `alamat`, `telepon`, `email`, `status_aktif`) VALUES
-(1, 'Anggota', 'Jl. Kebenaran Anggota', '087733195024', 'Anggota@gmail.com', 1),
-(2, 'Anggota00', 'Jl. Kebenaran 304', '087733195023', 'Anggota00@gmail.com', 1);
+(8, 'anggota1', 'ala anggota1', '1242142353254', 'anggota1@gmail.com', 1),
+(9, 'anggota2', 'ala anggota2', '4235423424235', 'anggota2@gmail.com', 1),
+(10, 'test1', 'ala test1', '2321312321432432', 'test1@gmail.com', 1);
 
 -- --------------------------------------------------------
 
@@ -167,6 +168,14 @@ CREATE TABLE `petugas` (
   `email` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `petugas`
+--
+
+INSERT INTO `petugas` (`id`, `nama`, `alamat`, `telepon`, `email`) VALUES
+(4, 'petugas1', 'ala petugas1', '2312321321321', 'petugas1@gmail.com'),
+(5, 'petugas2', 'ala petugas2', '1232134243254', 'petugas2@gmail.com');
+
 -- --------------------------------------------------------
 
 --
@@ -189,8 +198,11 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`, `id_anggota`, `id_petugas`, `id_user_role`, `status`) VALUES
 (1, 'Admin', 'Admin', 0, 0, 1, 1),
-(2, 'Anggota', 'Anggota', 1, 0, 2, 2),
-(3, 'Anggota00', 'Anggota00', 2, 0, 2, 2);
+(14, 'anggota1', 'anggota1', 8, 0, 2, 2),
+(15, 'anggota2', 'anggota2', 9, 0, 2, 2),
+(16, 'petugas1', 'petugas1', 0, 4, 3, 3),
+(17, 'petugas2', 'petugas2', 0, 5, 3, 3),
+(18, 'test1', 'test12345', 10, 0, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -278,7 +290,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `anggota`
 --
 ALTER TABLE `anggota`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `buku`
@@ -314,13 +326,13 @@ ALTER TABLE `penulis`
 -- AUTO_INCREMENT for table `petugas`
 --
 ALTER TABLE `petugas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `user_role`

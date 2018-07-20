@@ -3,13 +3,7 @@
         <a href="media.php?page=home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> - Home</a>
     </li>
     <li>  
-        <a href="media.php?page=buku"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> - Buku</a>
-    </li>
-    <li>  
-        <a href="media.php?page=anggota"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> - Anggota</a>
-    </li>
-    <li>  
-        <a href="media.php?page=petugas"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> - Petugas</a>
+        <a href="media.php?page=daftar_peminjaman"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> - Daftar Peminjaman Buku</a>
     </li>
     <?php /*<li>
         <a href="../logout.php">

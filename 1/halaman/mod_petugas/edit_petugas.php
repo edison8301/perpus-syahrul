@@ -1,5 +1,5 @@
                 <head>
-                    <title><?php echo $_SESSION['username']; ?> - EDIT ANGGOTA</title>
+                    <title><?php echo $_SESSION['username']; ?> - EDIT PETUGAS</title>
                 </head>
                 <?php
                   include '../config/koneksi.php';
@@ -9,7 +9,7 @@
                     
                     $id = ($_GET["id"]);
 
-                    $query = "SELECT * FROM anggota INNER JOIN user ON anggota.id=user.id_anggota WHERE id_anggota='$id'";
+                    $query = "SELECT * FROM petugas INNER JOIN user ON petugas.id=user.id_petugas WHERE id_petugas='$id'";
                     $result = mysqli_query($conn, $query);
 
                     if(!$result){
@@ -22,22 +22,22 @@
                     
                   } else {
 
-                    header("location:../../media.php?page=anggota");
+                    header("location:../../media.php?page=petugas");
                   }
 
                 ?>
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            Edit Anggota
+                            Edit Petugas
                             <span class="tools pull-right">
                                 <a class="fa fa-chevron-down" href="javascript:;"></a>
                             </span>
                         </header>
                         <div class="panel-body">
                             <div class="form">
-                                <form method="POST" action="halaman/mod_anggota/aksi_edit_anggota.php" class="cmxform form-horizontal" id="commentForm" novalidate="novalidate">
-                                    <input type="hidden" name="id" value="<?php echo $data['id_anggota']; ?>">
+                                <form method="POST" action="halaman/mod_petugas/aksi_edit_petugas.php" class="cmxform form-horizontal" id="commentForm" novalidate="novalidate">
+                                    <input type="hidden" name="id" value="<?php echo $data['id_petugas']; ?>">
                                     <div class="form-group">
                                         <label for="cname" class="control-label col-lg-3">Username :</label>
                                         <div class="col-lg-6">
@@ -72,15 +72,6 @@
                                         <label for="cname" class="control-label col-lg-3">Email :</label>
                                         <div class="col-lg-6">
                                             <input class="form-control" id="cname" name="email" minlength="2" maxlength="45" type="text" required="" value="<?php echo $data['email']; ?>">
-                                        </div>
-                                    </div>
-                                    <div class="form-group ">
-                                        <label for="curl" class="control-label col-lg-3">Status Aktif :</label>
-                                        <div class="col-lg-6">
-                                            <select class="form-control" name="status_aktif">
-                                                <option value="1" <?php if($data['status_aktif']=="1"){ echo "selected='selected'";} ?>>Aktif</option>
-                                                <option value="2" <?php if($data['status_aktif']=="2"){ echo "selected='selected'";} ?>>Tidak Aktif</option>
-                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-group">

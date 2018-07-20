@@ -1,10 +1,10 @@
-<title><?php echo $_SESSION['username']; ?> - DETAIL ANGGOTA</title>
+<title><?php echo $_SESSION['username']; ?> - DETAIL PETUGAS</title>
 <?php
 include "../config/koneksi.php";
 
 $id=$_GET['id'];
 
-$query = "SELECT * FROM anggota INNER JOIN user ON anggota.id=user.id_anggota WHERE id_anggota='$id'";
+$query = "SELECT * FROM petugas INNER JOIN user ON petugas.id=user.id_petugas WHERE id_petugas='$id'";
 $hasil = mysqli_query($conn, $query);
 $tampil = mysqli_num_rows($hasil);
 
@@ -19,7 +19,7 @@ if ( $tampil> 0) {
         <div class="col-md-12 w3ls-graph">
             <div class="agileinfo-grap">
                 <div class="panel panel-default">
-                    <div class="panel-heading">DETAIL ANGGOTA</div>
+                    <div class="panel-heading">DETAIL PETUGAS</div>
                         
                         <div class="table-responsive sr">
                           <table id="data" class="table table-striped b-t b-light">
@@ -32,7 +32,6 @@ if ( $tampil> 0) {
 									<th>Alamat</th>
 									<th>Telepon</th>
 									<th>Email</th>
-									<th>Status Aktif</th>
 									<th>Opsi</th>
 					        	</tr>
 					        </thead>
@@ -46,10 +45,9 @@ if ( $tampil> 0) {
 									<td><?php echo $data['alamat']; ?></td>
 									<td><?php echo $data['telepon']; ?></td>
 									<td><?php echo $data['email']; ?></td>
-									<td><?php echo $data['status_aktif']; ?></td>
 									<td>
-	                                    <a href="media.php?page=edit_anggota&id=<?php echo $data['id_anggota'] ?>"><button class="btn btn-success" type="submit"><i class="fa fa-pencil"></i></button></a>
-	                                    <a href="halaman/mod_anggota/aksi_hapus_anggota.php?id=<?php echo $data['id_anggota'] ?>"><button class="btn btn-success" type="submit"><i class="fa fa-trash-o"></i></button></a>
+	                                    <a href="media.php?page=edit_petugas&id=<?php echo $data['id_petugas'] ?>"><button class="btn btn-success" type="submit"><i class="fa fa-pencil"></i></button></a>
+	                                    <a href="halaman/mod_petugas/aksi_hapus_petugas.php?id=<?php echo $data['id_petugas'] ?>"><button class="btn btn-success" type="submit"><i class="fa fa-trash-o"></i></button></a>
 						            </td>
 					          	</tr>
 

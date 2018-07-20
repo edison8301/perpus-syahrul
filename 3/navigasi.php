@@ -5,12 +5,6 @@
     <li>  
         <a href="media.php?page=buku"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> - Buku</a>
     </li>
-    <li>  
-        <a href="media.php?page=anggota"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> - Anggota</a>
-    </li>
-    <li>  
-        <a href="media.php?page=petugas"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> - Petugas</a>
-    </li>
     <?php /*<li>
         <a href="../logout.php">
             <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
