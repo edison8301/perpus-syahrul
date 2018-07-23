@@ -108,23 +108,20 @@
 				include "halaman/mod_anggota/detail_anggota.php";
 				break;
 
-			/* |=========================================================| */
-			/* |====================| Anggota index |====================| */
-			/* |=========================================================| */
-			case 'petugas':
-				include "halaman/mod_petugas/petugas.php";
+			/* |========================================================| */
+			/* |====================| Edit Profile |====================| */
+			/* |========================================================| */
+			
+			case 'edit_profile':
+				include "halaman/edit_profile.php";
 				break;
 
-			case 'tambah_petugas':
-				include "halaman/mod_petugas/tambah_petugas.php";
-				break;
+			/* |=============================================================| */
+			/* |====================| Daftar Peminjaman |====================| */
+			/* |=============================================================| */
 
-			case 'edit_petugas':
-				include "halaman/mod_petugas/edit_petugas.php";
-				break;
-
-			case 'detail_petugas':
-				include "halaman/mod_petugas/detail_petugas.php";
+			case 'daftar_peminjaman_buku':
+				include "halaman/mod_peminjaman_buku/daftar_peminjaman_buku.php";
 				break;
 
 			/* |================================================================| */

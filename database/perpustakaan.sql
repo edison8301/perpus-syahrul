@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 20, 2018 at 11:51 AM
+-- Generation Time: Jul 23, 2018 at 12:05 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -108,6 +108,15 @@ CREATE TABLE `peminjaman` (
   `tanggal_pinjam` date NOT NULL,
   `tanggal_kembali` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `peminjaman`
+--
+
+INSERT INTO `peminjaman` (`id`, `id_buku`, `id_anggota`, `tanggal_pinjam`, `tanggal_kembali`) VALUES
+(3, 3, 9, '2018-07-23', '2018-07-30'),
+(4, 2, 8, '2018-07-23', '2018-07-30'),
+(5, 3, 8, '2018-07-23', '2018-07-30');
 
 -- --------------------------------------------------------
 
@@ -308,7 +317,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `penerbit`
