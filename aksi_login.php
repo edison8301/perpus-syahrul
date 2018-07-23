@@ -9,7 +9,10 @@
   $r      = mysqli_fetch_array($login);
 
   $iusr   = mysqli_query($conn, "SELECT * FROM user WHERE id='$r[id_anggota]'");
-  $img    = mysqli_fetch_array($iusr); 
+  $img    = mysqli_fetch_array($iusr);
+
+  $iusr1   = mysqli_query($conn, "SELECT * FROM user WHERE id='$r[id_petugas]'");
+  $img1    = mysqli_fetch_array($iusr1); 
 
   //buat mendefault foto jika tidak ada foto profil
   if(isset($img['foto'])){
@@ -22,11 +25,12 @@
   if ($ketemu > 0){
     session_start();
     
-    $_SESSION['username'] = $r['username']; //buat login masuk
-    $_SESSION['image']	  = $image;         //buat menampilkan gambar user
-    $_SESSION['iduser']   = $r['id_anggota'];       //buat edit profil
-    $_SESSION['password'] = $r['password']; //buat password login masuk
-    $_SESSION['login']    = 1;              //buat cek apakah ada data guru, user/siswa/i dan hanya bisa satu saja yang masuk
+    $_SESSION['username'] = $r['username'];   //buat login masuk
+    $_SESSION['image']	  = $image;           //buat menampilkan gambar user
+    $_SESSION['iduser']   = $r['id_anggota']; //buat edit profil
+    $_SESSION['idusers']   = $r['id_petugas']; //buat edit profil
+    $_SESSION['password'] = $r['password'];   //buat password login masuk
+    $_SESSION['login']    = 1;                //buat cek apakah ada data guru, user/siswa/i dan hanya bisa satu saja yang masuk
 
     header('location:'.$r['status']);       //buat menentukan mana admin, guru dan user/siswa/i
   }

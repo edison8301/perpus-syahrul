@@ -93,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu extended logout">
-                <li><a href="media.php?page=edit_profile&id=<?php echo $_SESSION['iduser'] ?>"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Profile</a></li>
+                <li><a href="media.php?page=edit_profile&id=<?php echo $_SESSION['idusers'] ?>"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Profile</a></li>
                 <li><a href="../logout.php"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log Out</a></li>
             </ul>
         </li> 
