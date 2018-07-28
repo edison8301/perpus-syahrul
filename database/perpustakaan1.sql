@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 28 Jul 2018 pada 21.36
+-- Generation Time: 28 Jul 2018 pada 21.43
 -- Versi Server: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -69,11 +69,7 @@ CREATE TABLE `buku` (
 --
 
 INSERT INTO `buku` (`id`, `nama`, `tahun_terbit`, `id_penulis`, `id_penerbit`, `id_kategori`, `sinopsis`, `sampul`, `berkas`) VALUES
-(1, 'Cintah Tak Kembali', 2013, 1, 2, 5, 'asd asdas dasdas dasd asdasd asdasdas dasd asdas dasdasdsada dasd sadas dsad sadas dsa dsad sad asd asd asdas dasd asdsad asdasd asd asda sdasda sdsadasdas', 'Cintah Tak Kembali_Koala.jpg', 'Cintah Tak Kembali_aasr.docx'),
-(2, 'Suamiku Jarang Pulang', 2015, 2, 1, 5, 'adasdas asdasa d asdas dasdas dsad asdadasdasdas dsad asdas dsad sadasd asdasd asd asdas dasdasddwdadaw assad sad sad asd sad asdas d asdsa dasdas', 'Suamiku Jarang Pulang_Penguins.jpg', 'Suamiku Jarang Pulang_sraa.docx'),
-(3, 'Kamu Ko Selingkuh', 2018, 3, 2, 4, 'asdasd sadasd as dasd asdasdas as a asdsa bda das da d sad as das das d asd sadsa fas fasf asf as fdsa das dsa dsa d asd sa d asd as das da sd asd as das d as das ds das d afg ewf awf ', 'Kamu Ko Selingkuh_Lighthouse.jpg', 'Kamu Ko Selingkuh_aasr.docx'),
-(4, 'asdsad', 2018, 1, 1, 1, 'asdasddadsd', 'asdsad_Penguins.jpg', 'asdsad_semple1.docx'),
-(5, 'asdasdas ', 2018, 1, 1, 1, 'SDsds', 'asdasdas _Koala.jpg', 'asdasdas _semple2.docx');
+(6, 'Apa aja', 2018, 1, 1, 1, 'zsdsa', 'Apa aja_Koala.jpg', 'Apa aja_semple1.docx');
 
 -- --------------------------------------------------------
 
@@ -307,7 +303,7 @@ ALTER TABLE `anggota`
 -- AUTO_INCREMENT for table `buku`
 --
 ALTER TABLE `buku`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `kategori`
