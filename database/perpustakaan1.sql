@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 23, 2018 at 12:05 PM
--- Server version: 10.1.28-MariaDB
+-- Generation Time: 28 Jul 2018 pada 21.36
+-- Versi Server: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `perpustakaan`
+-- Database: `perpustakaan1`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `anggota`
+-- Struktur dari tabel `anggota`
 --
 
 CREATE TABLE `anggota` (
@@ -38,7 +38,7 @@ CREATE TABLE `anggota` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `anggota`
+-- Dumping data untuk tabel `anggota`
 --
 
 INSERT INTO `anggota` (`id`, `nama`, `alamat`, `telepon`, `email`, `status_aktif`) VALUES
@@ -49,7 +49,7 @@ INSERT INTO `anggota` (`id`, `nama`, `alamat`, `telepon`, `email`, `status_aktif
 -- --------------------------------------------------------
 
 --
--- Table structure for table `buku`
+-- Struktur dari tabel `buku`
 --
 
 CREATE TABLE `buku` (
@@ -65,18 +65,20 @@ CREATE TABLE `buku` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `buku`
+-- Dumping data untuk tabel `buku`
 --
 
 INSERT INTO `buku` (`id`, `nama`, `tahun_terbit`, `id_penulis`, `id_penerbit`, `id_kategori`, `sinopsis`, `sampul`, `berkas`) VALUES
 (1, 'Cintah Tak Kembali', 2013, 1, 2, 5, 'asd asdas dasdas dasd asdasd asdasdas dasd asdas dasdasdsada dasd sadas dsad sadas dsa dsad sad asd asd asdas dasd asdsad asdasd asd asda sdasda sdsadasdas', 'Cintah Tak Kembali_Koala.jpg', 'Cintah Tak Kembali_aasr.docx'),
 (2, 'Suamiku Jarang Pulang', 2015, 2, 1, 5, 'adasdas asdasa d asdas dasdas dsad asdadasdasdas dsad asdas dsad sadasd asdasd asd asdas dasdasddwdadaw assad sad sad asd sad asdas d asdsa dasdas', 'Suamiku Jarang Pulang_Penguins.jpg', 'Suamiku Jarang Pulang_sraa.docx'),
-(3, 'Kamu Ko Selingkuh', 2018, 3, 2, 4, 'asdasd sadasd as dasd asdasdas as a asdsa bda das da d sad as das das d asd sadsa fas fasf asf as fdsa das dsa dsa d asd sa d asd as das da sd asd as das d as das ds das d afg ewf awf ', 'Kamu Ko Selingkuh_Lighthouse.jpg', 'Kamu Ko Selingkuh_aasr.docx');
+(3, 'Kamu Ko Selingkuh', 2018, 3, 2, 4, 'asdasd sadasd as dasd asdasdas as a asdsa bda das da d sad as das das d asd sadsa fas fasf asf as fdsa das dsa dsa d asd sa d asd as das da sd asd as das d as das ds das d afg ewf awf ', 'Kamu Ko Selingkuh_Lighthouse.jpg', 'Kamu Ko Selingkuh_aasr.docx'),
+(4, 'asdsad', 2018, 1, 1, 1, 'asdasddadsd', 'asdsad_Penguins.jpg', 'asdsad_semple1.docx'),
+(5, 'asdasdas ', 2018, 1, 1, 1, 'SDsds', 'asdasdas _Koala.jpg', 'asdasdas _semple2.docx');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -85,7 +87,7 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kategori`
+-- Dumping data untuk tabel `kategori`
 --
 
 INSERT INTO `kategori` (`id`, `nama`) VALUES
@@ -98,7 +100,7 @@ INSERT INTO `kategori` (`id`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `peminjaman`
+-- Struktur dari tabel `peminjaman`
 --
 
 CREATE TABLE `peminjaman` (
@@ -110,7 +112,7 @@ CREATE TABLE `peminjaman` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `peminjaman`
+-- Dumping data untuk tabel `peminjaman`
 --
 
 INSERT INTO `peminjaman` (`id`, `id_buku`, `id_anggota`, `tanggal_pinjam`, `tanggal_kembali`) VALUES
@@ -121,7 +123,7 @@ INSERT INTO `peminjaman` (`id`, `id_buku`, `id_anggota`, `tanggal_pinjam`, `tang
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penerbit`
+-- Struktur dari tabel `penerbit`
 --
 
 CREATE TABLE `penerbit` (
@@ -133,7 +135,7 @@ CREATE TABLE `penerbit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `penerbit`
+-- Dumping data untuk tabel `penerbit`
 --
 
 INSERT INTO `penerbit` (`id`, `nama`, `alamat`, `telepon`, `email`) VALUES
@@ -143,7 +145,7 @@ INSERT INTO `penerbit` (`id`, `nama`, `alamat`, `telepon`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penulis`
+-- Struktur dari tabel `penulis`
 --
 
 CREATE TABLE `penulis` (
@@ -155,7 +157,7 @@ CREATE TABLE `penulis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `penulis`
+-- Dumping data untuk tabel `penulis`
 --
 
 INSERT INTO `penulis` (`id`, `nama`, `alamat`, `telepon`, `email`) VALUES
@@ -166,7 +168,7 @@ INSERT INTO `penulis` (`id`, `nama`, `alamat`, `telepon`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `petugas`
+-- Struktur dari tabel `petugas`
 --
 
 CREATE TABLE `petugas` (
@@ -178,7 +180,7 @@ CREATE TABLE `petugas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `petugas`
+-- Dumping data untuk tabel `petugas`
 --
 
 INSERT INTO `petugas` (`id`, `nama`, `alamat`, `telepon`, `email`) VALUES
@@ -188,7 +190,7 @@ INSERT INTO `petugas` (`id`, `nama`, `alamat`, `telepon`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -202,7 +204,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `id_anggota`, `id_petugas`, `id_user_role`, `status`) VALUES
@@ -216,7 +218,7 @@ INSERT INTO `user` (`id`, `username`, `password`, `id_anggota`, `id_petugas`, `i
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_role`
+-- Struktur dari tabel `user_role`
 --
 
 CREATE TABLE `user_role` (
@@ -225,7 +227,7 @@ CREATE TABLE `user_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user_role`
+-- Dumping data untuk tabel `user_role`
 --
 
 INSERT INTO `user_role` (`id`, `nama`) VALUES
@@ -305,7 +307,7 @@ ALTER TABLE `anggota`
 -- AUTO_INCREMENT for table `buku`
 --
 ALTER TABLE `buku`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `kategori`
