@@ -1,6 +1,6 @@
 <ul class="sidebar-menu" id="nav-accordion">
     <li>   
-        <a href="media.php?page=home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> - Home</a>
+        <a href="media.php?page=home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> - Beranda</a>
     </li>
     <li>  
         <a href="media.php?page=daftar_peminjaman_buku"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> - Daftar Peminjaman Buku</a>
